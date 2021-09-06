@@ -51,7 +51,7 @@ public:
 	void spawn(Vector2f startPosition, float gravity);
 
 	// This is a pure virtual function
-	bool virtual handleInput() = 0;
+	virtual bool handleInput() = 0;
 	// This class is now abstract and cannot be instantiated
 
 	// Where is the player
