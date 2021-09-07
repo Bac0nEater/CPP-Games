@@ -81,6 +81,8 @@ private:
 	// Load a new level
 	void loadLevel();
 
+	bool detectCollisions(PlayableCharacter& character);
+
 public:
 	// The Engine constructor
 	Engine();
