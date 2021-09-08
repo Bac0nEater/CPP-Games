@@ -3,6 +3,7 @@
 #include <SFML/Audio.hpp>
 
 using namespace sf;
+using namespace std;
 
 SoundManager::SoundManager()
 {
