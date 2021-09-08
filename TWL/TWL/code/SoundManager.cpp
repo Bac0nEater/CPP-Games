@@ -103,8 +103,8 @@ void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
 			// Play the sound, if its not already
 			m_Fire1Sound.play();
 
-			m_FireLocations[0].x = emitterLocation.x;
-			m_FireLocations[0].y = emitterLocation.y;
+			// Store the emitter / fire location
+			m_FireLocations[0] = emitterLocation;
 		}
 		break;
 
@@ -116,8 +116,7 @@ void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
 		{
 			m_Fire2Sound.play();
 
-			m_FireLocations[1].x = emitterLocation.x;
-			m_FireLocations[1].y = emitterLocation.y;
+			m_FireLocations[1] = emitterLocation;
 		}
 		break;
 
@@ -129,8 +128,7 @@ void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
 		{
 			m_Fire3Sound.play();
 
-			m_FireLocations[2].x = emitterLocation.x;
-			m_FireLocations[2].y = emitterLocation.y;
+			m_FireLocations[2] = emitterLocation;
 		}
 		break;
 	}
