@@ -60,6 +60,8 @@ void Engine::update(float dtAsSeconds)
 
 	}// End if playing
 
+	// Stop the fire sound if the player is not close to the fire
+	m_SM.updateFire(m_Thomas.getPosition());
 
 	// Check if a fire sound needs to be played
 	vector<Vector2f>::iterator it;

@@ -1,4 +1,5 @@
 #include "SoundManager.h"
+#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
 using namespace sf;
@@ -41,6 +42,48 @@ SoundManager::SoundManager()
 	m_Fire1Sound.setLoop(true);
 	m_Fire2Sound.setLoop(true);
 	m_Fire3Sound.setLoop(true);
+
+	// Set all the fire locations outside of the map
+	m_FireLocations.push_back(Vector2f(-1.0f, -1.0f));
+	m_FireLocations.push_back(Vector2f(-1.0f, -1.0f));
+	m_FireLocations.push_back(Vector2f(-1.0f, -1.0f));
+}
+
+void SoundManager::updateFire(FloatRect listenerLocation) {
+	// Loop through all the fire locations that are inside of the map
+	for (int i = 0; i < m_FireLocations.size(); i++) {
+		if (m_FireLocations[i].x != -1.0f)
+		{
+			// Where is this fire?
+			// Store the location in pos
+			float posX = m_FireLocations[i].x;
+			float posY = m_FireLocations[i].y;
+
+			// is the fire near the player?
+			// Make a 500 pixel rectangle around the emitter
+			FloatRect localRect(posX - 250, posY - 250, 500, 500);
+
+			// Is the player outside localRect?
+			if (!listenerLocation.intersects(localRect))
+			{
+				// Stop the fire sound respectively
+				switch (i)
+				{
+				case 0:
+					m_Fire1Sound.stop();
+					break;
+
+				case 1:
+					m_Fire2Sound.stop();
+					break;
+
+				case 2:
+					m_Fire3Sound.stop();
+					break;
+				}
+			}
+		}
+	}
 }
 
 void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
@@ -58,6 +101,9 @@ void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
 		{
 			// Play the sound, if its not already
 			m_Fire1Sound.play();
+
+			m_FireLocations[0].x = emitterLocation.x;
+			m_FireLocations[0].y = emitterLocation.y;
 		}
 		break;
 
@@ -68,6 +114,9 @@ void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
 		if (m_Fire2Sound.getStatus() == Sound::Status::Stopped)
 		{
 			m_Fire2Sound.play();
+
+			m_FireLocations[1].x = emitterLocation.x;
+			m_FireLocations[1].y = emitterLocation.y;
 		}
 		break;
 
@@ -78,6 +127,9 @@ void SoundManager::playFire(Vector2f emitterLocation, Vector2f listenerLocation)
 		if (m_Fire3Sound.getStatus() == Sound::Status::Stopped)
 		{
 			m_Fire3Sound.play();
+
+			m_FireLocations[2].x = emitterLocation.x;
+			m_FireLocations[2].y = emitterLocation.y;
 		}
 		break;
 	}

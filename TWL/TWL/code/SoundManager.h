@@ -1,7 +1,9 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
 using namespace sf;
+using namespace std;
 
 class SoundManager
 {
@@ -25,8 +27,14 @@ private:
 	// Which sound should we use next, fire 1, 2 or 3
 	int m_NextSound = 1;
 
+	// Locations of fire 1, 2, and 3
+	vector <Vector2f> m_FireLocations;
+
 public:
 	SoundManager();
+
+	// update/stop the fire sound if necessary
+	void updateFire(FloatRect listenerLocation);
 
 	// play spatialized sound effects
 	void playFire(Vector2f emitterLocation, Vector2f listenerLocation);
