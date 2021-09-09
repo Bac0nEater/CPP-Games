@@ -1,0 +1,17 @@
+Debug Properties
+
+All Configurations
+	C/C++
+		General
+			Additional Include Directories
+				D:\Z Programming\Visual Studio 2019\SFML\include
+	Linker
+		General
+			Additional Library Directories
+				D:\Z Programming\Visual Studio 2019\SFML\lib
+Debug
+	Linker
+		Input
+			Additional Dependencies
+				Paste on far-left-hand side without overwrite it:
+				sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;
