@@ -6,6 +6,7 @@
 #include "LevelManager.h"
 #include "SoundManager.h"
 #include "HUD.h"
+#include "ParticleSystem.h"
 
 using namespace sf;
 
@@ -14,6 +15,9 @@ class Engine
 private:
 	// The texture holder
 	TextureHolder th;
+
+	// create a particle system
+	ParticleSystem m_PS;
 
 	// Thomas and his friend, Bob
 	Thomas m_Thomas;
