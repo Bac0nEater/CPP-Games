@@ -14,12 +14,6 @@ void Engine::update(float dtAsSeconds)
 
 	if (m_Playing)
 	{
-		// Update Thomas
-		m_Thomas.update(dtAsSeconds);
-
-		// Update Bob
-		m_Bob.update(dtAsSeconds);
-
 		// Detect collisions and see if characters
 		// have reached the goal tile
 		// The second part of the if condition is only executed
@@ -47,6 +41,12 @@ void Engine::update(float dtAsSeconds)
 		{
 			m_Thomas.stopFalling(m_Bob.getHead().top);
 		}
+
+		// Update Thomas
+		m_Thomas.update(dtAsSeconds);
+
+		// Update Bob
+		m_Bob.update(dtAsSeconds);
 
 
 		// Count down the time the player has left

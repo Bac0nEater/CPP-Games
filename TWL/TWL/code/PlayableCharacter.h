@@ -68,6 +68,7 @@ public:
 	Sprite getSprite();
 
 	// Make the character stand firm
+	void stopFalling();
 	void stopFalling(float position);
 	void stopRight(float position);
 	void stopLeft(float position);
