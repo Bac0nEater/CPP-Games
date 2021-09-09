@@ -51,14 +51,18 @@ SoundManager::SoundManager()
 }
 
 void SoundManager::updateFire(FloatRect listenerLocation) {
+	vector<Vector2f>::iterator i;
+	int currentFire = 1;
+
 	// Loop through all the fire locations that are inside of the map
-	for (int i = 0; i < m_FireLocations.size(); i++) {
-		if (m_FireLocations[i].x != -1.0f)
+	for (i = m_FireLocations.begin(); i != m_FireLocations.end(); i++)
+	{
+		if ((*i).x != -1.0f)
 		{
 			// Where is this fire?
 			// Store the location in pos
-			float posX = m_FireLocations[i].x;
-			float posY = m_FireLocations[i].y;
+			float posX = (*i).x;
+			float posY = (*i).y;
 
 			// is the fire near the player?
 			// Make a 500 pixel rectangle around the emitter
@@ -68,22 +72,25 @@ void SoundManager::updateFire(FloatRect listenerLocation) {
 			if (!listenerLocation.intersects(localRect))
 			{
 				// Stop the fire sound respectively
-				switch (i)
+				switch (currentFire)
 				{
-				case 0:
+				case 1:
 					m_Fire1Sound.stop();
 					break;
 
-				case 1:
+				case 2:
 					m_Fire2Sound.stop();
 					break;
 
-				case 2:
+				case 3:
 					m_Fire3Sound.stop();
 					break;
 				}
 			}
 		}
+
+		// Go to the next fire
+		currentFire++;
 	}
 }
 
