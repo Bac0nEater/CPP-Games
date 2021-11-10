@@ -1,5 +1,8 @@
 # CPP-Games
 
+To run the game, go to its folder and **double click** the .bat file.
+
+
 ## Timber
 
 ### Controls:
