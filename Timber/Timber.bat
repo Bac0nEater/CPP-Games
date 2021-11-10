@@ -1,0 +1,1 @@
+start "Running..." /d "%~dp0Timber" "Timber.exe"
