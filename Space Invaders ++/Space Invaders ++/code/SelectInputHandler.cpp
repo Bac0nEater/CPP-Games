@@ -11,6 +11,7 @@ void SelectInputHandler::handleKeyPressed(
 	// Quit the game
 	if (Keyboard::isKeyPressed(Keyboard::Escape))
 	{
+		SoundEngine::playClick();
 		window.close();
 	}
 }
