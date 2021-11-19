@@ -17,13 +17,10 @@ SelectUIPanel::SelectUIPanel(Vector2i res) :
 
 	m_Text.setFillColor(sf::Color(0, 255, 0, 255));
 	m_Text.setString("SPACE INVADERS ++");
-
 	m_Font.loadFromFile("fonts/Roboto-Bold.ttf");
 	m_Text.setFont(m_Font);
-
 	m_Text.setPosition(Vector2f(m_ButtonPadding,
 		m_ButtonHeight + (m_ButtonPadding * 2)));
-
 	m_Text.setCharacterSize(160);
 
 	initialiseButtons();
