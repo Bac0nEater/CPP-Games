@@ -37,7 +37,7 @@ void GameOverUIPanel::initialiseButtons()
 
 	addButton(m_ButtonWidth + (m_ButtonPadding * 2),
 		m_ButtonPadding,
-		m_ButtonWidth,
+		m_ButtonWidth * 1.3,
 		m_ButtonHeight,
 		255, 0, 0,
 		"Home");
