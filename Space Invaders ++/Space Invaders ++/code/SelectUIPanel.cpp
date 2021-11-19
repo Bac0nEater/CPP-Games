@@ -5,9 +5,9 @@ SelectUIPanel::SelectUIPanel(Vector2i res) :
 	// Create a new UIPanel
 	// by calling the super-class constructor
 	UIPanel(res,
-		(res.x / 10) * 2, // Start 2/10 across
+		(res.x / 10) * 1, // Start 1/10 across
 		res.y / 3, // 1/3 of the resolution from the top
-		(res.x / 10) * 6, // as wide as 6/10 of the resolution
+		(res.x / 10) * 8, // as wide as 8/10 of the resolution
 		res.y / 3, // and as tall as 1/3 of the resolution
 		50, 255, 255, 255) // a, r, g, b
 {
@@ -21,7 +21,7 @@ SelectUIPanel::SelectUIPanel(Vector2i res) :
 	m_Text.setFont(m_Font);
 	m_Text.setPosition(Vector2f(m_ButtonPadding,
 		m_ButtonHeight + (m_ButtonPadding * 2)));
-	m_Text.setCharacterSize(160);
+	m_Text.setCharacterSize(res.y / 6.75f);  // default 160 = 1080 / 6.75
 
 	initialiseButtons();
 }
