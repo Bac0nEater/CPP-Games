@@ -10,11 +10,9 @@ SelectScreen::SelectScreen(ScreenManagerRemoteControl* smrc, Vector2i res)
 	m_ScreenManagerRemoteControl = smrc;
 
 	m_BackgroundTexture.loadFromFile("graphics/background.png");
-
 	m_BackgroundSprite.setTexture(m_BackgroundTexture);
-	auto textureSize = m_BackgroundSprite.
-		getTexture()->getSize();
 
+	auto textureSize = m_BackgroundSprite.getTexture()->getSize();
 	m_BackgroundSprite.setScale(
 		float(m_View.getSize().x) / textureSize.x,
 		float(m_View.getSize().y) / textureSize.y);
