@@ -18,7 +18,7 @@ GameUIPanel::GameUIPanel(Vector2i res) :
 	m_Font.loadFromFile("fonts/Roboto-Bold.ttf");
 	m_Text.setFont(m_Font);
 	m_Text.setPosition(Vector2f(15, 15));
-	m_Text.setCharacterSize(res.y / 18); // default 60 = 1080 / 18
+	m_Text.setCharacterSize(res.x / 32);  // default 60 (= 1920 / 32)
 }
 
 void GameUIPanel::draw(RenderWindow& window)

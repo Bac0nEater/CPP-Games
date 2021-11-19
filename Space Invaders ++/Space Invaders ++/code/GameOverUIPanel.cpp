@@ -21,7 +21,7 @@ GameOverUIPanel::GameOverUIPanel(Vector2i res) :
 	m_Text.setFont(m_Font);
 	m_Text.setPosition(Vector2f(m_ButtonPadding,
 		(m_ButtonPadding * 2) + m_ButtonHeight));
-	m_Text.setCharacterSize(60);
+	m_Text.setCharacterSize(res.y / 18);  // default 60 (= 1080 / 18)
 
 	initialiseButtons();
 }
