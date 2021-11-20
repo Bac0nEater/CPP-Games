@@ -53,7 +53,7 @@ void InvaderUpdateComponent::dropDownAndReverse()
 {
 	m_MovingRight = !m_MovingRight;
 	m_TC->getLocation().y += m_TC->getSize().y;
-	m_Speed += (WorldState::WAVE_NUMBER)+
+	m_Speed += (WorldState::WAVE_NUMBER) +
 		(WorldState::NUM_INVADERS_AT_START
 			- WorldState::NUM_INVADERS)
 		* m_SpeedModifier;
