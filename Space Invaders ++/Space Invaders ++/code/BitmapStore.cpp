@@ -53,11 +53,12 @@ sf::Texture& BitmapStore::getBitmap(std::string const& filename)
 	}
 	else
 	{
-#ifdef debuggingOnConsole
-		cout <<
-			"BitmapStore::getBitmap()Texture not found Crrrashh!"
-			<< endl;
-#endif
+		#ifdef debuggingOnConsole
+			cout <<
+				"BitmapStore::getBitmap()Texture not found Crrrashh!"
+				<< endl;
+		#endif
+
 		return keyValuePair->second;
 	}
 }
