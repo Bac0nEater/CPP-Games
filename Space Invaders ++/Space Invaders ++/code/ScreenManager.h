@@ -4,7 +4,7 @@
 #include "GameScreen.h"
 #include "ScreenManagerRemoteControl.h"
 #include "SelectScreen.h"
-//#include "LevelManager.h"
+#include "LevelManager.h"
 #include "BitmapStore.h"
 #include <iostream>
 
@@ -14,7 +14,7 @@ using namespace std;
 class ScreenManager : public ScreenManagerRemoteControl {
 private:
 	map <string, unique_ptr<Screen>> m_Screens;
-	//LevelManager m_LevelManager;
+	LevelManager m_LevelManager;
 
 protected:
 	string m_CurrentScreen = "Select";
@@ -33,30 +33,26 @@ public:
 	*****************************************************
 	*****************************************************/
 
-	void ScreenManagerRemoteControl::
-		SwitchScreens(string screenToSwitchTo)
+	void ScreenManagerRemoteControl::SwitchScreens(string screenToSwitchTo)
 	{
 		m_CurrentScreen = "" + screenToSwitchTo;
 		m_Screens[m_CurrentScreen]->initialise();
 	}
 
-	void ScreenManagerRemoteControl::
-		loadLevelInPlayMode(string screenToLoad)
+	void ScreenManagerRemoteControl::loadLevelInPlayMode(string screenToLoad)
 	{
 		//m_LevelManager.getGameObjects().clear();
-		//m_LevelManager.
-		//loadGameObjectsForPlayMode(screenToLoad);
+		m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
 		SwitchScreens("Game");
 	}
 
-	//vector<GameObject>&
-	//ScreenManagerRemoteControl::getGameObjects()
-	//{
-	//return m_LevelManager.getGameObjects();
-	//}
+	vector<GameObject>& ScreenManagerRemoteControl::getGameObjects()
+	{
+		return m_LevelManager.getGameObjects();
+	}
 
-	//GameObjectSharer& shareGameObjectSharer()
-	//{
-	//return m_LevelManager;
-	//}
+	GameObjectSharer& ScreenManagerRemoteControl::shareGameObjectSharer()
+	{
+		return m_LevelManager;
+	}
 };
