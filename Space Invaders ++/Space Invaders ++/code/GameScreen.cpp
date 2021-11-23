@@ -88,3 +88,8 @@ void GameScreen::draw(RenderWindow& window)
 	// Draw the UIPanel view(s)
 	Screen::draw(window);
 }
+
+BulletSpawner* GameScreen::getBulletSpawner()
+{
+	return this;
+}
