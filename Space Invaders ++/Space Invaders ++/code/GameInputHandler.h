@@ -11,6 +11,7 @@ private:
 	shared_ptr<TransformComponent> m_PTC;
 
 	bool m_AButtonPressed = false;
+	bool m_BButtonPressed = false;
 
 	void shootABullet();
 

@@ -59,6 +59,23 @@ void GameInputHandler::handleGamepad(RenderWindow& window)
 		// Shoot a bullet
 		shootABullet();
 	}
+
+	// Has the player pressed the B button? XBox One controller
+	if (Joystick::isButtonPressed(0, 1))
+	{
+		m_BButtonPressed = true;
+	}
+
+	// Has player just released the B button?
+	if (!Joystick::isButtonPressed(0, 1) && m_BButtonPressed)
+	{
+		m_BButtonPressed = false;
+
+		// Back to home scene
+		SoundEngine::playClick();
+		getPointerToScreenManagerRemoteControl()->
+			SwitchScreens("Select");
+	}
 }
 
 void GameInputHandler::handleKeyPressed(
