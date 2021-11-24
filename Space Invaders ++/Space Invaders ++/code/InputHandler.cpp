@@ -53,11 +53,11 @@ void InputHandler::handleInput(RenderWindow& window, Event& event)
 
 	if (sf::Joystick::isConnected(0))
 	{
-		handleGamepad();
+		handleGamepad(window);
 	}
 }
 
-void InputHandler::handleGamepad()
+void InputHandler::handleGamepad(RenderWindow& window)
 {}// Do nothing unless handled by a derived class
 
 void InputHandler::handleKeyPressed(Event & event, RenderWindow & window)

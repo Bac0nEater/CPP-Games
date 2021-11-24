@@ -27,7 +27,7 @@ void GameInputHandler::initialize()
 		getTransformComponent();
 }
 
-void GameInputHandler::handleGamepad()
+void GameInputHandler::handleGamepad(RenderWindow& window)
 {
 	float deadZone = 10.0f;
 	float x = Joystick::getAxisPosition(0, sf::Joystick::X);

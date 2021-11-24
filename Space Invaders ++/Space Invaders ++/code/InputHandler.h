@@ -27,7 +27,7 @@ public:
 
 	void handleInput(RenderWindow& window, Event& event);
 
-	virtual void handleGamepad();
+	virtual void handleGamepad(RenderWindow& window);
 	virtual void handleKeyPressed(Event& event, RenderWindow& window);
 	virtual void handleKeyReleased(Event& event, RenderWindow& window);
 	virtual void handleLeftClick(string& buttonInteractedWith, RenderWindow& window);

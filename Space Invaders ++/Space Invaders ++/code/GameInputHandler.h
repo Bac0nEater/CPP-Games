@@ -16,7 +16,7 @@ private:
 
 public:
 	void initialize();
-	void handleGamepad() override;
+	void handleGamepad(RenderWindow& window) override;
 	void handleKeyPressed(Event& event,
 		RenderWindow& window) override;
 
