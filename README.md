@@ -59,6 +59,8 @@ To run the game, go to its folder and **double click** the .bat file.
 #### Controller (XBox One) / GamePad
 - Left joystick – control the player (air ship)
 - A – shoot the bullet
+- X – play the game or replay the game
+- B – quit the game or back to home scene
 
 ![image](https://user-images.githubusercontent.com/69305722/143230024-06d32f24-9c69-4cb8-abd5-26967f5f5f95.png)
 
