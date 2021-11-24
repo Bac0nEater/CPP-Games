@@ -4,7 +4,6 @@
 #include "SoundEngine.h"
 
 using namespace sf;
-using namespace std;
 
 class GameEngine {
 private:

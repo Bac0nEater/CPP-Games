@@ -10,14 +10,13 @@ class LevelManager : public GameObjectSharer {
 private:
 	vector<GameObject> m_GameObjects;
 
-	const std::string WORLD_FOLDER = "world";
-	const std::string SLASH = "/";
+	const string WORLD_FOLDER = "world";
+	const string SLASH = "/";
 
 	void runStartPhase();
 	void activateAllGameObjects();
 
 public:
-	vector<GameObject>& getGameObjects();
 	void loadGameObjectsForPlayMode(string screenToLoad);
 
 	/****************************************************
@@ -26,7 +25,7 @@ public:
 	*****************************************************
 	*****************************************************/
 
-	vector<GameObject>& GameObjectSharer::getGameObjectsWithGOS()
+	vector<GameObject>& GameObjectSharer::getGameObjects()
 	{
 		return m_GameObjects;
 	}

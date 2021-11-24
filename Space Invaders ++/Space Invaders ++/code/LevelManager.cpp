@@ -14,11 +14,6 @@ void LevelManager::loadGameObjectsForPlayMode(string screenToLoad)
 	runStartPhase();
 }
 
-vector<GameObject>& LevelManager::getGameObjects()
-{
-	return m_GameObjects;
-}
-
 void LevelManager::runStartPhase()
 {
 	auto it = m_GameObjects.begin();

@@ -54,8 +54,7 @@ void GameInputHandler::handleGamepad()
 		spawnLocation.y = m_PTC->getLocation().y;
 
 		static_cast<GameScreen*>(getmParentScreen())->
-			getBulletSpawner()->spawnBullet(
-				spawnLocation, true);
+			getBulletSpawner()->spawnBullet(spawnLocation, true);
 	}
 }
 
@@ -122,11 +121,7 @@ void GameInputHandler::handleKeyReleased(
 		spawnLocation.x = m_PTC->getLocation().x + m_PTC->getSize().x / 2;
 		spawnLocation.y = m_PTC->getLocation().y;
 
-		//static_cast<GameScreen*>(getmParentScreen())->
-		//	getBulletSpawner()->spawnBullet(
-		//		spawnLocation, true);
-
 		static_cast<GameScreen*>(getmParentScreen())->
-			spawnBullet(spawnLocation, true);
+			getBulletSpawner()->spawnBullet(spawnLocation, true);
 	}
 }

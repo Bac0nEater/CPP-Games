@@ -41,7 +41,6 @@ public:
 
 	void ScreenManagerRemoteControl::loadLevelInPlayMode(string screenToLoad)
 	{
-		//m_LevelManager.getGameObjects().clear();
 		m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
 		SwitchScreens("Game");
 	}
