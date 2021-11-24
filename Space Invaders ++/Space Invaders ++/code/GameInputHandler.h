@@ -10,7 +10,7 @@ private:
 	shared_ptr<PlayerUpdateComponent> m_PUC;
 	shared_ptr<TransformComponent> m_PTC;
 
-	bool mBButtonPressed = false;
+	bool m_AButtonPressed = false;
 
 public:
 	void initialize();

@@ -36,16 +36,16 @@ void GameInputHandler::handleGamepad()
 
 	m_PUC->updateShipTravelWithController(x, y);
 
-	// Has the player pressed the B button? XBox One controller
-	if (Joystick::isButtonPressed(0, 1))
+	// Has the player pressed the A button? XBox One controller
+	if (Joystick::isButtonPressed(0, 0))
 	{
-		mBButtonPressed = true;
+		m_AButtonPressed = true;
 	}
 
-	// Has player just released the B button?
-	if (!Joystick::isButtonPressed(0, 1) && mBButtonPressed)
+	// Has player just released the A button?
+	if (!Joystick::isButtonPressed(0, 0) && m_AButtonPressed)
 	{
-		mBButtonPressed = false;
+		m_AButtonPressed = false;
 
 		// Shoot a bullet
 		SoundEngine::playShoot();
