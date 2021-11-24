@@ -1,6 +1,7 @@
 # CPP-Games
 
-To run the game, go to its folder and **double click** the .bat file.
+To run the game, go to its folder and **double click** the .bat file.<br />
+Or run the game through Visual Studio, but you have to set **Solution Platforms** to x86.
 
 
 ## Timber
