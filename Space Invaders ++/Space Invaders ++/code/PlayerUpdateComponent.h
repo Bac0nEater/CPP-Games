@@ -22,6 +22,9 @@ private:
 	bool m_IsHoldingUp = false;
 	bool m_IsHoldingDown = false;
 
+	bool m_RecentHorizontalIsLeft = true;
+	bool m_RecentVerticalIsUp = true;
+
 public:
 	void updateShipTravelWithController(float x, float y);
 	void moveLeft();

@@ -12,8 +12,21 @@ void PlayerUpdateComponent::update(float fps)
 			((m_Speed / 100) * m_YExtent) * fps;
 	}
 
-	// Left and right
-	if (m_IsHoldingLeft)
+	// Left and right (Horizontal)
+	if (m_IsHoldingLeft && m_IsHoldingRight)
+	{
+		// if both horizontal keys are holding,
+		// only the recent one take the effect
+		if (m_RecentHorizontalIsLeft)
+		{
+			m_TC->getLocation().x -= m_Speed * fps;
+		}
+		else
+		{
+			m_TC->getLocation().x += m_Speed * fps;
+		}
+	}
+	else if (m_IsHoldingLeft)
 	{
 		m_TC->getLocation().x -= m_Speed * fps;
 	}
@@ -22,8 +35,21 @@ void PlayerUpdateComponent::update(float fps)
 		m_TC->getLocation().x += m_Speed * fps;
 	}
 
-	// Up and down
-	if (m_IsHoldingUp)
+	// Up and down (Vertical)
+	if (m_IsHoldingUp && m_IsHoldingDown)
+	{
+		// if both vertical keys are holding,
+		// only the recent one take the effect
+		if (m_RecentVerticalIsUp)
+		{
+			m_TC->getLocation().y -= m_Speed * fps;
+		}
+		else
+		{
+			m_TC->getLocation().y += m_Speed * fps;
+		}
+	}
+	else if (m_IsHoldingUp)
 	{
 		m_TC->getLocation().y -= m_Speed * fps;
 	}
@@ -72,22 +98,22 @@ void PlayerUpdateComponent::updateShipTravelWithController(float x, float y)
 void PlayerUpdateComponent::moveLeft()
 {
 	m_IsHoldingLeft = true;
-	stopRight();
+	m_RecentHorizontalIsLeft = true;
 }
 void PlayerUpdateComponent::moveRight()
 {
 	m_IsHoldingRight = true;
-	stopLeft();
+	m_RecentHorizontalIsLeft = false;
 }
 void PlayerUpdateComponent::moveUp()
 {
 	m_IsHoldingUp = true;
-	stopDown();
+	m_RecentVerticalIsUp = true;
 }
 void PlayerUpdateComponent::moveDown()
 {
 	m_IsHoldingDown = true;
-	stopUp();
+	m_RecentVerticalIsUp = false;
 }
 
 void PlayerUpdateComponent::stopLeft()
