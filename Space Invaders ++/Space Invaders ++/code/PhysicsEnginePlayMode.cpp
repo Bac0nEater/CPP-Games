@@ -174,9 +174,6 @@ void PhysicsEnginePlayMode::handleInvaderDirection()
 }
 
 void PhysicsEnginePlayMode::initilize(GameObjectSharer& gos) {
-	m_PUC = static_pointer_cast<PlayerUpdateComponent>(
-		gos.findFirstObjectWithTag("Player")
-		.getComponentByTypeAndSpecificType("update", "player"));
 	m_Player = &gos.findFirstObjectWithTag("Player");
 }
 

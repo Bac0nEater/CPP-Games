@@ -5,8 +5,6 @@
 class PhysicsEnginePlayMode
 {
 private:
-	shared_ptr<PlayerUpdateComponent> m_PUC;
-
 	GameObject* m_Player;
 	bool m_InvaderHitWallThisFrame = false;
 	bool m_InvaderHitWallPreviousFrame = false;

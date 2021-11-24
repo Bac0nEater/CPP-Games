@@ -44,12 +44,12 @@ public:
 			}
 		}
 
-	#ifdef debuggingErrors
-		cout <<
-			"LevelManager.h findFirstGameObjectWithTag() "
-			<< "- TAG NOT FOUND ERROR!"
-			<< endl;
-	#endif
+		#ifdef debuggingErrors
+			cout <<
+				"LevelManager.h findFirstGameObjectWithTag() "
+				<< "- TAG NOT FOUND ERROR!"
+				<< endl;
+		#endif
 
 		return m_GameObjects[0];
 	}
