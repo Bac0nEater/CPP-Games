@@ -6,6 +6,16 @@ class BulletSpawner;
 
 void GameInputHandler::initialize()
 {
+	m_PUC = static_pointer_cast<PlayerUpdateComponent>
+		(getPointerToScreenManagerRemoteControl()->
+			shareGameObjectSharer()
+			.findFirstObjectWithTag("Player")
+			.getComponentByTypeAndSpecificType("update", "player"));
+
+	m_PTC = getPointerToScreenManagerRemoteControl()->
+		shareGameObjectSharer()
+		.findFirstObjectWithTag("Player").
+		getTransformComponent();
 }
 
 void GameInputHandler::handleGamepad()
