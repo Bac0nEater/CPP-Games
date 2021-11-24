@@ -10,6 +10,43 @@ void GameInputHandler::initialize()
 
 void GameInputHandler::handleGamepad()
 {
+	float deadZone = 10.0f;
+	float x = Joystick::getAxisPosition(0, sf::Joystick::X);
+	float y = Joystick::getAxisPosition(0, sf::Joystick::Y);
+
+	// value between -10 and 10 is dead zone
+	if (x < deadZone && x > -deadZone)
+	{
+		x = 0;
+	}
+	if (y < deadZone && y > -deadZone)
+	{
+		y = 0;
+	}
+
+	m_PUC->updateShipTravelWithController(x, y);
+
+	// Has the player pressed the B button? XBox One controller
+	if (Joystick::isButtonPressed(0, 1))
+	{
+		mBButtonPressed = true;
+	}
+
+	// Has player just released the B button?
+	if (!Joystick::isButtonPressed(0, 1) && mBButtonPressed)
+	{
+		mBButtonPressed = false;
+
+		// Shoot a bullet
+		SoundEngine::playShoot();
+		Vector2f spawnLocation;
+		spawnLocation.x = m_PTC->getLocation().x + m_PTC->getSize().x / 2;
+		spawnLocation.y = m_PTC->getLocation().y;
+
+		static_cast<GameScreen*>(getmParentScreen())->
+			getBulletSpawner()->spawnBullet(
+				spawnLocation, true);
+	}
 }
 
 void GameInputHandler::handleKeyPressed(
@@ -74,6 +111,10 @@ void GameInputHandler::handleKeyReleased(
 		Vector2f spawnLocation;
 		spawnLocation.x = m_PTC->getLocation().x + m_PTC->getSize().x / 2;
 		spawnLocation.y = m_PTC->getLocation().y;
+
+		//static_cast<GameScreen*>(getmParentScreen())->
+		//	getBulletSpawner()->spawnBullet(
+		//		spawnLocation, true);
 
 		static_cast<GameScreen*>(getmParentScreen())->
 			spawnBullet(spawnLocation, true);
