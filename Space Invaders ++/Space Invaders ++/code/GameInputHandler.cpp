@@ -101,22 +101,22 @@ void GameInputHandler::handleKeyReleased(
 		m_PUC->stopLeft();
 	}
 
-	else if (event.key.code == Keyboard::Right)
+	if (event.key.code == Keyboard::Right)
 	{
 		m_PUC->stopRight();
 	}
 
-	else if (event.key.code == Keyboard::Up)
+	if (event.key.code == Keyboard::Up)
 	{
 		m_PUC->stopUp();
 	}
 
-	else if (event.key.code == Keyboard::Down)
+	if (event.key.code == Keyboard::Down)
 	{
 		m_PUC->stopDown();
 	}
 
-	else if (event.key.code == Keyboard::Space)
+	if (event.key.code == Keyboard::Space)
 	{
 		// Shoot a bullet
 		shootABullet();
