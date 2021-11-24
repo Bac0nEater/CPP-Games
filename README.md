@@ -1,6 +1,7 @@
 # CPP-Games
 
-To run the game, go to its folder and **double click** the .bat file.
+To run the game, go to its folder and **double click** the .bat file.<br />
+Or run the game through Visual Studio, but you have to set **Solution Platforms** to x86.
 
 
 ## Timber
@@ -46,5 +47,22 @@ To run the game, go to its folder and **double click** the .bat file.
 - E – turn on/off the split-screen
 
 ![image](https://user-images.githubusercontent.com/69305722/132668116-29900cb3-84a5-452b-a84d-84655bd5449a.png)
+
+
+## Space Invaders ++
+
+### Controls:
+#### Keyboard & Mouse
+- Esc – quit the game or back to home scene
+- 🠕, ↓, 🠔, 🠖 – control the player (air ship)
+- Space – shoot the bullet
+- Left mouse click – click the buttons
+#### Controller (XBox One) / GamePad
+- Left joystick – control the player (air ship)
+- A – shoot the bullet
+- X – play the game or replay the game
+- B – quit the game or back to home scene
+
+![image](https://user-images.githubusercontent.com/69305722/143230024-06d32f24-9c69-4cb8-abd5-26967f5f5f95.png)
 
 Reference: https://www.packtpub.com/product/beginning-c-game-programming-second-edition/9781838648572

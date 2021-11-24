@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\BitmapStore.cpp" />
+    <ClCompile Include="code\BlueprintObjectParser.cpp" />
+    <ClCompile Include="code\BulletSpawner.cpp" />
+    <ClCompile Include="code\BulletUpdate.cpp" />
+    <ClCompile Include="code\Button.cpp" />
+    <ClCompile Include="code\ColliderComponent.cpp" />
+    <ClCompile Include="code\Component.cpp" />
+    <ClCompile Include="code\GameEngine.cpp" />
+    <ClCompile Include="code\GameInputHandler.cpp" />
+    <ClCompile Include="code\GameObject.cpp" />
+    <ClCompile Include="code\GameObjectBlueprint.cpp" />
+    <ClCompile Include="code\GameObjectFactoryPlayMode.cpp" />
+    <ClCompile Include="code\GameObjectSharer.cpp" />
+    <ClCompile Include="code\GameOverInputHandler.cpp" />
+    <ClCompile Include="code\GameOverUIPanel.cpp" />
+    <ClCompile Include="code\GameScreen.cpp" />
+    <ClCompile Include="code\GameUIPanel.cpp" />
+    <ClCompile Include="code\GraphicsComponent.cpp" />
+    <ClCompile Include="code\InputHandler.cpp" />
+    <ClCompile Include="code\InvaderUpdate.cpp" />
+    <ClCompile Include="code\LevelManager.cpp" />
+    <ClCompile Include="code\ObjectTags.cpp" />
+    <ClCompile Include="code\PhysicsEnginePlayMode.cpp" />
+    <ClCompile Include="code\PlayerUpdate.cpp" />
+    <ClCompile Include="code\PlayModeObjectLoader.cpp" />
+    <ClCompile Include="code\RectColliderComponent.cpp" />
+    <ClCompile Include="code\Screen.cpp" />
+    <ClCompile Include="code\ScreenManager.cpp" />
+    <ClCompile Include="code\ScreenManagerRemoteControl.cpp" />
+    <ClCompile Include="code\SelectInputHandler.cpp" />
+    <ClCompile Include="code\SelectScreen.cpp" />
+    <ClCompile Include="code\SelectUIPanel.cpp" />
+    <ClCompile Include="code\SoundEngine.cpp" />
+    <ClCompile Include="code\Space Invaders ++.cpp" />
+    <ClCompile Include="code\StandardGraphicsComponent.cpp" />
+    <ClCompile Include="code\TransformComponent.cpp" />
+    <ClCompile Include="code\UIPanel.cpp" />
+    <ClCompile Include="code\UpdateComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\BitmapStore.h" />
+    <ClInclude Include="code\BlueprintObjectParser.h" />
+    <ClInclude Include="code\BulletSpawner.h" />
+    <ClInclude Include="code\BulletUpdateComponent.h" />
+    <ClInclude Include="code\Button.h" />
+    <ClInclude Include="code\ColliderComponent.h" />
+    <ClInclude Include="code\Component.h" />
+    <ClInclude Include="code\DevelopState.h" />
+    <ClInclude Include="code\GameEngine.h" />
+    <ClInclude Include="code\GameInputHandler.h" />
+    <ClInclude Include="code\GameObject.h" />
+    <ClInclude Include="code\GameObjectBlueprint.h" />
+    <ClInclude Include="code\GameObjectFactoryPlayMode.h" />
+    <ClInclude Include="code\GameObjectSharer.h" />
+    <ClInclude Include="code\GameOverInputHandler.h" />
+    <ClInclude Include="code\GameOverUIPanel.h" />
+    <ClInclude Include="code\GameScreen.h" />
+    <ClInclude Include="code\GameUIPanel.h" />
+    <ClInclude Include="code\GraphicsComponent.h" />
+    <ClInclude Include="code\InputHandler.h" />
+    <ClInclude Include="code\InvaderUpdateComponent.h" />
+    <ClInclude Include="code\LevelManager.h" />
+    <ClInclude Include="code\ObjectTags.h" />
+    <ClInclude Include="code\PhysicsEnginePlayMode.h" />
+    <ClInclude Include="code\PlayerUpdateComponent.h" />
+    <ClInclude Include="code\PlayModeObjectLoader.h" />
+    <ClInclude Include="code\RectColliderComponent.h" />
+    <ClInclude Include="code\Screen.h" />
+    <ClInclude Include="code\ScreenManager.h" />
+    <ClInclude Include="code\ScreenManagerRemoteControl.h" />
+    <ClInclude Include="code\SelectInputHandler.h" />
+    <ClInclude Include="code\SelectScreen.h" />
+    <ClInclude Include="code\SelectUIPanel.h" />
+    <ClInclude Include="code\SoundEngine.h" />
+    <ClInclude Include="code\StandardGraphicsComponent.h" />
+    <ClInclude Include="code\TransformComponent.h" />
+    <ClInclude Include="code\UIPanel.h" />
+    <ClInclude Include="code\UpdateComponent.h" />
+    <ClInclude Include="code\WorldState.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3616A57E-8F19-40DA-8738-0BCFA960121D}</ProjectGuid>
+    <RootNamespace>SpaceInvaders</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Z Programming\Visual Studio 2019\SFML\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Z Programming\Visual Studio 2019\SFML\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Z Programming\Visual Studio 2019\SFML\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Z Programming\Visual Studio 2019\SFML\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
