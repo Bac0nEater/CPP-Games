@@ -4,6 +4,7 @@
 #include "GameOverInputHandler.h"
 #include "BulletSpawner.h"
 #include "PhysicsEnginePlayMode.h"
+#include "SoundEngine.h"
 
 class GameScreen : public Screen, public BulletSpawner
 {
@@ -47,6 +48,7 @@ public:
 		{
 			Time elapsedTime = m_BulletClock.getElapsedTime();
 			if (elapsedTime.asMilliseconds() > 500) {
+				SoundEngine::playShoot();
 				m_PlayerBulletSpawnLocation.x = spawnLocation.x;
 				m_PlayerBulletSpawnLocation.y = spawnLocation.y;
 				m_WaitingToSpawnBulletForPlayer = true;

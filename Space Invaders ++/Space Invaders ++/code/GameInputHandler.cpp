@@ -1,8 +1,17 @@
 #include "GameInputHandler.h"
-#include "SoundEngine.h"
 #include "GameScreen.h"
 
 class BulletSpawner;
+
+void GameInputHandler::shootABullet()
+{
+	Vector2f spawnLocation;
+	spawnLocation.x = m_PTC->getLocation().x + m_PTC->getSize().x / 2;
+	spawnLocation.y = m_PTC->getLocation().y;
+
+	static_cast<GameScreen*>(getmParentScreen())->
+		getBulletSpawner()->spawnBullet(spawnLocation, true);
+}
 
 void GameInputHandler::initialize()
 {
@@ -48,13 +57,7 @@ void GameInputHandler::handleGamepad()
 		m_AButtonPressed = false;
 
 		// Shoot a bullet
-		SoundEngine::playShoot();
-		Vector2f spawnLocation;
-		spawnLocation.x = m_PTC->getLocation().x + m_PTC->getSize().x / 2;
-		spawnLocation.y = m_PTC->getLocation().y;
-
-		static_cast<GameScreen*>(getmParentScreen())->
-			getBulletSpawner()->spawnBullet(spawnLocation, true);
+		shootABullet();
 	}
 }
 
@@ -116,12 +119,6 @@ void GameInputHandler::handleKeyReleased(
 	else if (event.key.code == Keyboard::Space)
 	{
 		// Shoot a bullet
-		SoundEngine::playShoot();
-		Vector2f spawnLocation;
-		spawnLocation.x = m_PTC->getLocation().x + m_PTC->getSize().x / 2;
-		spawnLocation.y = m_PTC->getLocation().y;
-
-		static_cast<GameScreen*>(getmParentScreen())->
-			getBulletSpawner()->spawnBullet(spawnLocation, true);
+		shootABullet();
 	}
 }

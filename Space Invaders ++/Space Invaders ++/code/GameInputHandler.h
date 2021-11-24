@@ -12,6 +12,8 @@ private:
 
 	bool m_AButtonPressed = false;
 
+	void shootABullet();
+
 public:
 	void initialize();
 	void handleGamepad() override;
