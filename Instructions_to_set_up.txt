@@ -4,11 +4,11 @@ All Configurations
 	C/C++
 		General
 			Additional Include Directories
-				D:\Z Programming\Visual Studio 2019\SFML\include
+				C:\Z_Files\Programming\Microsoft Visual Studio\SFML\include
 	Linker
 		General
 			Additional Library Directories
-				D:\Z Programming\Visual Studio 2019\SFML\lib
+				C:\Z_Files\Programming\Microsoft Visual Studio\SFML\lib
 Debug
 	Linker
 		Input
