@@ -4,11 +4,11 @@ All Configurations
 	C/C++
 		General
 			Additional Include Directories
-				C:\Z_Files\Programming\Microsoft Visual Studio\SFML\include
+				N:\Projects\C++ Project\Games\SFML\include
 	Linker
 		General
 			Additional Library Directories
-				C:\Z_Files\Programming\Microsoft Visual Studio\SFML\lib
+				N:\Projects\C++ Project\Games\SFML\lib
 Debug
 	Linker
 		Input
